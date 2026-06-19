@@ -470,9 +470,13 @@ button:hover::before, .scrap-btn:hover::before {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-    h1 { font-size: 1.8rem; }
-    .scrapbook-container { padding-top: 100px; }
-    .nav-links { gap: 10px; }
-    .nav-links a { font-size: 0.7rem; }
+@media (max-width: 600px) {
+    h1 { font-size: 1.5rem; }
+    .scrapbook-container { padding-top: 40px; }
+    .nav-links { 
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a { font-size: 0.9rem; }
 }
