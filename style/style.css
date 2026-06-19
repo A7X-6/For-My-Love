@@ -502,10 +502,12 @@ button:hover::before, .scrap-btn:hover::before {
     .emoji-navbar button {
         position: fixed;
         top: 50%;
-        right: 8px;
-        transform: translateY(-50%) scale(0.9);
+        right: 10px;
+        transform: translateY(-50%) scale(0.75);
         padding: 6px 4px;
         gap: 6px;
+        bottom: auto;
+        transform-origin: right center;
     }
     .nav-links { 
         gap: 10px;
