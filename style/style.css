@@ -494,7 +494,6 @@ button:hover::before, .scrap-btn:hover::before {
         right: 10px;
         transform: translateY(-50%) !important;
         padding: 12px 4px !important;
-        display: flex !important;
         flex-direction: column !important;
         gap: 10px !important;
         height: auto !important;
