@@ -335,11 +335,11 @@ button:hover::before, .scrap-btn:hover::before {
 /* GALLERY GRID */
 .gallery-grid, .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     width: 100%;
     max-width: 900px;
-    padding: 20px 0;
+    padding: 10px 0;
     justify-content: center;
     justify-items: center;
 }
