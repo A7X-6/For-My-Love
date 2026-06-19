@@ -230,7 +230,7 @@ body.locked nav {
 
 .polaroid-frame img {
     width: 100%;
-    height: auto;
+    height: 250px;
     object-fit: cover;
     display: block;
     transition: transform .4 ease;
@@ -336,11 +336,11 @@ button:hover::before, .scrap-btn:hover::before {
 /* GALLERY GRID */
 .gallery-grid, .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     width: 100%;
     max-width: 900px;
-    padding: 10px 0;
+    padding: 20px 0;
     justify-content: center;
     justify-items: center;
 }
@@ -474,6 +474,11 @@ button:hover::before, .scrap-btn:hover::before {
 @media (max-width: 480px) {
     h1 { font-size: 1.5rem; }
     .scrapbook-container { padding-top: 40px; }
+    .gallery-grid, .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px 0;
+    }
     .button, .scrap-btn {
         font-size: 1rem;
         padding: 8px 16px;
@@ -488,32 +493,24 @@ button:hover::before, .scrap-btn:hover::before {
         border-radius: 20px;
     }
     .emoji-navbar {
-        position: relative !important;
-        top: 0;
-        right: 0;
-        transform: none !important;
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 12px !important;
-        padding: 8px 15px !important;
-        margin: 15px auto !important;
-        width: max-content !important;
-        height: auto !important;
-        border-radius: 30px !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important;
-    }
-    .emoji-navbar button {
-        width: 34px !important;
-        height: 34px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
+        padding: 8px 4px;
+        gap: 8px;
+        right: 5px;
+        transform: scale(0.9);
+        transform-origin: right center;
     }
     .emoji-sticker {
-        width: 22px !important;
-        height: 22px !important;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .emoji-navbar button {
+        position: fixed;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%) scale(0.9);
+        padding: 6px 4px;
+        gap: 6px;
     }
     .nav-links { 
         gap: 10px;
