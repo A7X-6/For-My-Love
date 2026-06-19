@@ -217,8 +217,9 @@ body.locked nav {
     display: inline-block;
     cursor: pointer;
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .polaroid-frame:hover {
@@ -229,7 +230,7 @@ body.locked nav {
 
 .polaroid-frame img {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
     display: block;
     transition: transform .4 ease;
@@ -470,9 +471,13 @@ button:hover::before, .scrap-btn:hover::before {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     h1 { font-size: 1.5rem; }
     .scrapbook-container { padding-top: 40px; }
+    .button, .scrap-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
     .nav-links { 
         gap: 10px;
         flex-wrap: wrap;
