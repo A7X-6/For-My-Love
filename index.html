@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNTUK PASANGAN HIDUPKU 🤍</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- PASSWORD SCREEN -->
+    <div id="password-screen" class="password-screen">
+        <div class="password-frame">
+            <h2>Me For You
+            <p>You For Me</p>
+            </h2>
+
+            <input id="password-input" type="password" placeholder="Password..." />
+
+            <button id="password-enter">Enter</button>
+
+            <p id="password-error" class="password-error"></p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar hidden">
+        <div class="nav-links">
+            <a href="#" onclick="showSection('hero')">Home</a>
+            <a href="#" onclick="showSection('letter')">Letter</a>
+            <a href="#" onclick="showSection('galleries')">Memories</a>
+            <a href="#" onclick="showSection('music-page')">Music</a>
+        </div>
+    </nav>
+    <div id="emoji-navbar" class="emoji-navbar hidden">
+        <button onclick="selectEmoji(this,'🤍')">🤍</button>
+        <button onclick="selectEmoji(this,'🫶🏻')">🫶🏻</button>
+        <button onclick="selectEmoji(this,'😍')">😍</button>
+        <button onclick="selectEmoji(this,'⭐')">⭐</button>
+        <button onclick="selectEmoji(this,'😋')">😋</button>
+        <button onclick="selectEmoji(this,'😽')">😽</button>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div id="hearts-container"></div>
+
+    <div class="scrapbook-container">
+        <!-- HERO -->
+        <section id="hero" class="section hero">
+            <div class="polaroid hero-frame">
+                <h1>UNTUK CINTAKU SAYANGKU CANTIKKU SEMESTAKU 🤍</h1>
+                <p class="handwritten">Sebuah ruang kecil, di ujung dunia yang sunyi...<br>
+                Aku menemukan pusat jiwaku yang selama ini keliru, dirimu adalah alasan mengapa lelah ku terasa damai.<br>
+                Dirimu adalah tempatku pulang, tempatku merasa aman.<br>
+                Senyummu adalah pemandangan terindah, sementara dirimu adalah anugerah yang abadi dan tak terurai.</p>
+                <button class="special-sound" onclick="openLetter()">Buka Surat</button>
+            </div>
+        </section>
+
+        <!-- LOVE LETTER -->
+        <section id="letter" class="section hidden">
+            <div class="letter-box polaroid">
+                <div class="tape"></div>
+                <h2>Love Letter 💌</h2>
+                <div class="letter-content handwritten">
+                    <p>Terimakasiii banyaaa yawww buat semua yang udah kamu kasih dan lakukan buat aku.</p>
+                    <p>Aku seneng bangeeett kamu ada di kehidupanku, dan kamu selalu ada buat aku. Aku bersyukur bangeeett punya kamu, aku bener bener bahagiaaa bangeeett.</p>
+                    <p>Semua kenangan indah yang kita buat bareng, semua tawa, semua pelukan, semua momen spesial yang kita bagi, semua itu sangat berarti buat aku.</p>
+                    <p>Cerita kita tidaa bakal pernah berhenti, cerita kita bakal terus berlanjut.</p>
+                    <p>Jangan pernah berhenti perbaiki dirimu jadi lebih baik. Jangan pernah berhenti setia sama aku. Jangan pernah berhenti cinta sama aku. Jangan pernah berhenti sayang sama aku.</p>
+                    <p>Jaga dirimu baik baik, jaga kesehatanmu, jaga pola makanmu. Jaga hatimu buat aku, jaga perasaanmu buat aku. Jangan kecewain akuu yaa, aku percayain semuanya sama kamu.</p>
+                    <p>Love You So Muchhh, Love You More Than Anything In This World.</p>
+                    <p>Love You Forever And Always, Cintaaaakuuu Sayaaangkuuu Cantiiikkuuu Semesataaakuuu🤍.</p>
+                </div>
+                <button onclick="showGalleries()">See Memories</button>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="galleries" class="section hidden">
+            <div class="scrapbook-page">
+                <h2>PAGES OF US</h2>
+                <div class="gallery-buttons">
+                    <button class="scrap-btn" onclick="showGallery('firstphoto')">First Photo</button>
+                    <button class="scrap-btn" onclick="showGallery('ourmoments')">Our Moments</button>
+                    <button class="scrap-btn" onclick="showGallery('journey')">Journey</button>
+                </div>
+
+                <!-- FIRST PHOTO -->
+                <div id="firstphoto" class="gallery hidden">
+                    <div class="polaroid-frame"><img src="assets/img/firstphoto1.jpeg" onclick="openPopup(this.src)"></div>
+                    <div class="polaroid-frame"><img src="assets/img/firstphoto2.jpeg" onclick="openPopup(this.src)"></div>
+                    <div class="polaroid-frame"><img src="assets/img/firstphoto3.jpeg" onclick="openPopup(this.src)"></div>
+                </div>
+
+                <!-- OUR MOMENTS -->
+                <div id="ourmoments" class="gallery-page hidden">
+                    <div class="sub-buttons">
+                        <button class="scrap-btn" onclick="showSubGallery('bitsofus')">Bits of Us</button>
+                        <button class="scrap-btn" onclick="showSubGallery('bluechapter')">Blue Chapter</button>
+                        <button class="scrap-btn" onclick="showSubGallery('burjo')">Burjo</button>
+                        <button class="scrap-btn" onclick="showSubGallery('newyears')">New Years</button>
+                        <button class="scrap-btn" onclick="showSubGallery('photobox')">Photobox</button>
+                        <button class="scrap-btn" onclick="showSubGallery('solograndmall')">Solo Grand Mall</button>
+                    </div>
+
+                    <!-- BITS OF US -->
+                    <div id="bitsofus" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus9.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus10.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus11.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus12.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus13.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus14.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bitsofus15.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/bitsofus1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/bitsofus2.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+
+                    <!-- BLUE CHAPTER -->
+                    <div id="bluechapter" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/bluechapter1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bluechapter2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bluechapter3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bluechapter4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bluechapter5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/bluechapter6.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/bluechapter1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/bluechapter2.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+
+                    <!-- BURJO -->
+                    <div id="burjo" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/burjo1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/burjo9.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/burjo1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/burjo2.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+
+                    <!-- NEW YEARS -->
+                    <div id="newyears" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/newyears1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/newyears9.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/newyears1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/newyears2.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+
+                    <!-- PHOTOBOX -->
+                    <div id="photobox" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/photobox1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox9.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox10.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox11.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/photobox12.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/photobox1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/photobox2.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/photobox3.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/photobox4.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/photobox5.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+
+                    <!-- SOLO GRAND MALL -->
+                    <div id="solograndmall" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall9.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall10.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall11.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/solograndmall12.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JOURNEY -->
+                <div id="journey" class="gallery-page hidden">
+                    <div class="sub-buttons">
+                        <button class="scrap-btn" onclick="showSubGallery('jogja')">Jogja</button>
+                        <button class="scrap-btn" onclick="showSubGallery('semarang')">Semarang</button>
+                    </div>
+                    <div id="jogja" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/jogja1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja9.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja10.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja11.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/jogja12.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/jogja1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/jogja2.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+                    <div id="semarang" class="subgallery hidden">
+                        <div class="gallery-grid">
+                            <div class="polaroid-frame"><img src="assets/img/semarang1.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang2.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang3.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang4.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang5.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang6.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang7.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang8.jpeg" onclick="openPopup(this.src)"></div>
+                            <div class="polaroid-frame"><img src="assets/img/semarang9.jpeg" onclick="openPopup(this.src)"></div>
+                        </div>
+                        <div class="video-grid">
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang1.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang2.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang3.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang4.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang5.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang6.mp4" type="video/mp4"></video></div>
+                            <div class="video-frame"><video controls><source src="assets/vid/semarang7.mp4" type="video/mp4"></video></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MUSIC PAGE -->
+        <section id="music-page" class="section hidden">
+            <div class="polaroid music-frame">
+                <h2>Our Song 🎵</h2>
+                <iframe style="border-radius: 12px"
+                src="https://open.spotify.com/playlist/67yBWUZXWPL0f6N63pXoWM?si=-h1FFMSaRAmqqAOxLGQ-TA&pt=1a00aeb4a82820e8297ce02384b1e954&pi=vGvxuT3QRb2B7"
+                    width="100%"
+                    height="500"
+                    frameborder="0"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <!-- POPUP -->
+    <div id="popup" class="popup hidden">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popup-img">
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="bgMusic" loop><source src="assets/audio/backsound.mp3" type="audio/mpeg"></audio>
+
+    <audio id="clickSound"><source src="assets/audio/click.mp3" type="audio/mpeg"></audio>
+
+    <audio id="emojiSound"><source src="assets/audio/emoji.mp3" type="audio/mpeg"></audio>
+
+    <audio id="paperSound"><source src="assets/audio/paper.mp3" type="audio/mpeg"></audio>
+
+    <audio id="cameraSound"><source src="assets/audio/polaroid.mp3" type="audio/mpeg"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
