@@ -488,26 +488,28 @@ button:hover::before, .scrap-btn:hover::before {
         border-radius: 20px;
     }
     .emoji-navbar {
-        padding: 8px 4px;
-        gap: 8px;
-        right: 5px;
-        transform: scale(0.9);
-        transform-origin: right center;
-    }
-    .emoji-sticker {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-    }
-    .emoji-navbar button {
         position: fixed;
+        bottom: auto;
         top: 50%;
         right: 10px;
-        transform: translateY(-50%) scale(0.75);
-        padding: 6px 4px;
-        gap: 6px;
-        bottom: auto;
-        transform-origin: right center;
+        transform: translateY(-50%) !important;
+        padding: 12px 4px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        height: auto !important;
+        width: auto !important;
+    }
+    .emoji-navbar button {
+        width: 36px !important;
+        height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .emoji-sticker {
+        width: 24px !important;
+        height: 24px !important;
     }
     .nav-links { 
         gap: 10px;
