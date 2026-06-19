@@ -494,10 +494,18 @@ button:hover::before, .scrap-btn:hover::before {
         transform: scale(0.9);
         transform-origin: right center;
     }
-    .emoji-sticker, emoji-navbar button {
+    .emoji-sticker {
         width: 30px;
         height: 30px;
         font-size: 1rem;
+    }
+    .emoji-navbar button {
+        position: fixed;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%) scale(0.9);
+        padding: 6px 4px;
+        gap: 6px;
     }
     .nav-links { 
         gap: 10px;
