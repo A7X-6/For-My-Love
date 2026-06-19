@@ -492,6 +492,16 @@ button:hover::before, .scrap-btn:hover::before {
         width: 90%;
         border-radius: 20px;
     }
+    .emoji-navbar {
+        top: auto;
+        bottom: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        
+        flex-direction: row;
+        padding: 8px 12px;
+        border-radius: 30px;
+    }
     .nav-links { 
         gap: 10px;
         flex-wrap: wrap;
